@@ -27,36 +27,34 @@ img {
   width: 20%;
 }
 
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow = hidden;
-  background-color: orange;
+div.menu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
 }
 
-ul.topnav li a {float: left;}
-
-ul.topnav li a:hover {background-color: #32CD32}
-
-@media screen and (max-width:680px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right;
+div.menu a {
     display: inline-block;
-  }
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.menu a:hover {
+    background-color: #777;
 }
     </style>
     <title>Mushy0364 - Home</title>
   </head>
   <body>
     <h1>Welcome to Joseph's Website!</h1>
-    <ul class="topnav" id="myTopnav">
-      <li><a href="https://www.github.com/mushy0364/mushy0364.github.io/index.html">Home  </a></li>
-      <li><a href="videos/videos.html">Catchy Videos  </a></li>
-      <li><a href="https://www.github.com/mushy0364/" target="_blank">Github</a></li>
-      <li><a href="http://www.funnydogsite.com/" target="_blank">SOFTD</a></li>
-    </ul>
+    <div class="menu">
+      <a href="index.html">Home  </a>
+      <a href="videos.html">Catchy Videos  </a>
+      <a href="https://www.github.com/mushy0364/" target="_blank">Github</a>
+      <a href="http://www.funnydogsite.com/" target="_blank">SOFTD</a>
+    </div>
     <p>
       Welcome to my website! Enjoy your stay!
       <img src="fruit doggo.jpg">
