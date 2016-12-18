@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
-</head>
-<body>
-
+    <style>
+      body {
+  font-family: sans-serif;
+  color: #FBF5E3;
+  background: #074656;
+  margin-left: 3em;
+}
+h1 {
+  color: orange;
+}
+h3 {
+  color: #32CD32;
+}
+p {
+  color: white;
+}
+img {
+  margin-left: 0em;
+  margin-bottom: 0em;
+  width: 20%;
+}
+div.menu {
+    background-color: orange;
+    overflow: auto;
+    white-space: nowrap;
+}
+div.menu a {
+    display: inline-block;
+    color: #074656;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+div.menu a:hover {
+    background-color: #32CD32;
+}
+    </style>
+    <title>Mushy0364 - Grade Calc</title>
+  </head>
+  <body>
+    <h1>Grade Calculator</h1>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="videos.html">Catchy Videos</a>
+      <a href="gradecalc.html">Grade Calculator</a>
+      <a href="https://www.github.com/mushy0364/" target="_blank">Github</a>
+      <a href="http://www.funnydogsite.com/" target="_blank">SOFTD</a>
+    </div>  
+<body> 
+<p>
 <script type="text/javascript">
-function show_prompt() {
-        var grades = prompt("Please Enter a Number").split(",");
-        var total=0;
-    for(var i in grades) { total += arr[i]; }
-        var avrg = total / grades.length
-
-        document.write("Number: " + total);
-        document.write("<br>");
+var formal_grade = 0
+var informal_grade = 0
+function formals() {
+  var pr = prompt("Enter formal grades")
+  var formal_vals = pr.split(",") // Prompt Response
+  for (var i = 0; i < formal_vals.length; i++) {
+    formal_vals[i] = parseInt(formal_vals[i])
+}
+  var sum = formal_vals.reduce((a, b) => a + b, 0)
+  var mean = sum / formal_vals.length
+    formal_grade = mean * .65
 
 }
-show_prompt();
-var avrg = number + number + number + number + number
-document.write('Average of scores : ' + avrg);     
 
-</script>   
+function informals() {
+  var pr = prompt("Enter informal grades")
+  var formal_vals = pr.split(",") // Prompt Response
+  for (var i = 0; i < formal_vals.length; i++) {
+    formal_vals[i] = parseInt(formal_vals[i])
+}
+  var sum = formal_vals.reduce((a, b) => a + b, 0)
+  var mean = sum / formal_vals.length
+    informal_grade = mean * .35
+
+}
+
+function print_grade() {
+  window.document.write("Grade is: " + (formal_grade + informal_grade))
+}
+
+</script>
+&nbsp;
+To see your current grade, click on the buttons to insert your grade and calculate it.
+<br> &nbsp;
+To see a future grade, click on the buttons and add an additional "future" grade and calculate it.
+<br> &nbsp;
+<button onClick="formals()">Insert Formals</button>
+<button onClick="informals()">Insert Informals</button>
+<button onClick="print_grade()">Calculate Grade</button>
+</p>
 </body>
 </html>
