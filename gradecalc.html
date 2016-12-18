@@ -74,7 +74,7 @@ button {
 var formal_grade = 0
 var informal_grade = 0
 function formals() {
-  var pr = prompt("Enter formal grades")
+  var pr = prompt("Enter formal grades, separated by commas.")
   var formal_vals = pr.split(",") // Prompt Response
   for (var i = 0; i < formal_vals.length; i++) {
     formal_vals[i] = parseInt(formal_vals[i])
@@ -86,7 +86,7 @@ function formals() {
 }
 
 function informals() {
-  var pr = prompt("Enter informal grades")
+  var pr = prompt("Enter informal grades, separated by commas.")
   var formal_vals = pr.split(",") // Prompt Response
   for (var i = 0; i < formal_vals.length; i++) {
     formal_vals[i] = parseInt(formal_vals[i])
