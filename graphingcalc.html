@@ -9,31 +9,25 @@
   background: #074656;
   margin-left: 3em;
 }
-
 h1 {
   color: orange;
 }
-
 h3 {
   color: #32CD32;
 }
-
 p {
   color: white;
 }
-
 img {
   margin-left: 0em;
   margin-bottom: 0em;
   width: 20%;
 }
-
 div.menu {
     background-color: orange;
     overflow: auto;
     white-space: nowrap;
 }
-
 div.menu a {
     display: inline-block;
     color: #074656;
@@ -41,17 +35,14 @@ div.menu a {
     padding: 14px;
     text-decoration: none;
 }
-
 div.menu a:hover {
     background-color: #32CD32;
 }
-
 .header img {
   float: left;
   width: 50px;
   height: 50px;
 }
-
 .header h1 {
   position: relative;
   top: 18px;
@@ -76,9 +67,14 @@ div.menu a:hover {
       <a href="http://www.funnydogsite.com/" target="_blank">SOFTD</a>
     </div>
     <p>
-      Welcome to my website! Enjoy your stay!
-      <br> &nbsp;
-      <br> &nbsp;
-      <img src="fruit doggo.jpg">
+      A simple graphing calculator made by using the desmos API. Original calculator found here: <a href="https://www.desmos.com/calculator">
+    <script src="https://www.desmos.com/api/v0.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <div id="calculator" style="width: 1280px; height: 720px;"></div>
+    <script>
+      var elt = document.getElementById('calculator');
+      var calculator = Desmos.GraphingCalculator(elt);
+      calculator.setExpression({id:'graph1', latex:'y=x^2'});
+    </script>
     </p>
+  </body>
 </html>
