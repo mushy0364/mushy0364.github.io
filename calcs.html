@@ -123,10 +123,15 @@ To see a future grade, click on the buttons and add an additional "future" grade
 <h2>Simplifying Radicals</h2>
 <input id="radical" placeholder="Radical to be simplified">
 <script>
-function radicals() {
+function get_radicals() {
   var num = document.getElementById("radical").value
-  window.document.write(num)
+  return num
+}
+function solving_radicals() {
+  var num = get_radicals()
+  var perfectsqrt = [4,9,16,25,36,49,64,81,100,121,144,169,196,225,256,289,324,361,400];
+  window.document.write(perfectsqrt + " Radical is = " + num)
 }
 </script>
-<button onClick="radicals()">Go</button>
+<button onClick="solving_radicals()">Go</button>
 </html>
