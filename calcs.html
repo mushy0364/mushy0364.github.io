@@ -121,15 +121,12 @@ To see a future grade, click on the buttons and add an additional "future" grade
 <body>
 <p>
 <h2>Simplifying Radicals</h2>
-<input id="num" placeholder="Number to simplify"> &nbsp;
+<input id="radical" placeholder="Radical to be simplified">
 <script>
-var num = document.getElementById("num").value;
-function main() {
-  window.document.write("HELLO!")
-  //var perfsq = [
-  //perfsq{nums:4,9,16,25,36,49,64,81,100,121,144,169,196,225,256,289,324,361,400}
-  //];
-  //for (num = 0; num < 18; num++) {
+function radicals() {
+  var num = document.getElementById("radical").value
+  window.document.write(num)
+}
 </script>
-<button onClick="main()">Go</button>
+<button onClick="radicals()">Go</button>
 </html>
