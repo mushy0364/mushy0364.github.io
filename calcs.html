@@ -61,12 +61,12 @@ button {
   <body>
     <div class="header">
     <a href="index.html"><img src=favicon.ico alt="logo"/></a>
-    <h1>Grade Calculator</h1>
+    <h1>Useful Calculators</h1>
     </div>
     <div class="menu">
       <a href="index.html">Home</a>
       <a href="videos.html">Catchy Videos</a>
-      <a href="gradecalc.html">Grade Calculator</a>
+      <a href="calcs.html">Calculators</a>
       <a href="graphingcalc.html">Graphing Calculator</a>
       <a href="https://www.github.com/mushy0364/" target="_blank">Github</a>
       <a href="http://www.funnydogsite.com/" target="_blank">SOFTD</a>
@@ -106,14 +106,30 @@ function print_grade() {
 }
 
 </script>
-&nbsp;
+<h2>Grade Calculator</h2>
 To see your current grade, click on the buttons to insert your grade and calculate it.
-<br> &nbsp;
+<br></br>
 To see a future grade, click on the buttons and add an additional "future" grade and calculate it.
-<br> &nbsp;
+<br></br>
 <button onClick="formals()">Insert Formals</button>
+&nbsp;
 <button onClick="informals()">Insert Informals</button>
+&nbsp;
 <button onClick="print_grade()">Calculate Grade</button>
 </p>
 </body>
+<body>
+<p>
+<h2>Simplifying Radicals</h2>
+<input id="num" placeholder="Number to simplify"> &nbsp;
+<script>
+var num = document.getElementById("num").value;
+function main() {
+  window.document.write("HELLO!")
+  //var perfsq = [
+  //perfsq{nums:4,9,16,25,36,49,64,81,100,121,144,169,196,225,256,289,324,361,400}
+  //];
+  //for (num = 0; num < 18; num++) {
+</script>
+<button onClick="main()">Go</button>
 </html>
