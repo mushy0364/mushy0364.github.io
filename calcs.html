@@ -128,14 +128,13 @@ function get_radicals() {
   return num
 }
 function solving_radicals() {
-  var radical = get_radicals()
+  var radical = parseInt(get_radicals())
   var perfectsqrt = [4,9,16,25,36,49,64,81,100,121,144,169,196,225,256,289,324,361,400];
-  for (num = 0; num > perfectsqrt.length; num++) {
-  	  	if (Number(radical).isInList(perfectsqrt)) {
-    		var simplified = Math.pow(radical, 1/2)
-        }
+  for (var num = 0; num <= perfectsqrt.length; num++) {
+    if ((radical % num) <= 0) {
+      window.document.write(Math.pow(num, 1/2) + "sqrt" + (radical/num))   
+    }
   }
-  window.document.write(perfectsqrt + " Radical is = " + radical + " Simplified = " + simplified)
 }
 </script>
 <button onClick="solving_radicals()">Go</button>
