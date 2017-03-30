@@ -124,17 +124,35 @@ To see a future grade, click on the buttons and add an additional "future" grade
 <input id="radical" placeholder="Radical to be simplified">
 <script>
 function get_radicals() {
-  var num = document.getElementById("radical").value
+  var num = parseInt(document.getElementById("radical").value)
   return num
 }
 function solving_radicals() {
-  var radical = parseInt(get_radicals())
-  var perfectsqrt = [4,9,16,25,36,49,64,81,100,121,144,169,196,225,256,289,324,361,400];
-  for (var num = 0; num <= perfectsqrt.length; num++) {
-    if ((radical % num) <= 0) {
-      window.document.write(Math.pow(num, 1/2) + "sqrt" + (radical/num))   
-    }
-  }
+        var radical = get_radicals()
+        var negative = false;
+        var persq = [400,361,324,289,256,225,196,169,144,121,100,81,64,49,36,25,16,9,4];
+        var output = "Cannot be simplified: √" + radical.toString();
+        if (radical < 0) {
+          radical = radical * -1;
+          negative = true;
+        }
+        for (var num = 0;num < persq.length; num++) {
+          if (radical % persq[num] == 0) {
+            if (radical / persq[num] == 1) { 
+              if (negative) {
+                output = (persq[num] ** 1/2).toString() + "i"
+              } else {
+                output = (persq[num] ** 1/2).toString()
+              }
+            } else if (negative) {
+              output = (persq[num] ** 1/2).toString()+"i√"+(radical/persq[num]).toString();
+            } else {
+              output = (persq[num] ** 1/2).toString()+"√"+(radical/persq[num]).toString();
+            }
+            break;
+          }
+        }
+        document.getElementById('output').innerHTML = output;
 }
 </script>
 <button onClick="solving_radicals()">Go</button>
