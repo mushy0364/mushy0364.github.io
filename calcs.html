@@ -143,14 +143,14 @@ function solving_radicals() {
           if (radical % persq[num] == 0) {
             if (radical / persq[num] == 1) { 
               if (negative) {
-                output = (persq[num] ** 1/2).toString() + "i"
+                output = (persq[num] ** .5).toString() + "i"
               } else {
-                output = (persq[num] ** 1/2).toString()
+                output = (persq[num] ** .5).toString()
               }
             } else if (negative) {
-              output = (persq[num] ** 1/2).toString()+"i√"+(radical/persq[num]).toString();
+              output = (persq[num] ** .5).toString()+"i√"+(radical/persq[num]).toString();
             } else {
-              output = (persq[num] ** 1/2).toString()+"√"+(radical/persq[num]).toString();
+              output = (persq[num] ** .5).toString()+"√"+(radical/persq[num]).toString();
             }
             break;
           }
