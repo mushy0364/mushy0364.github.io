@@ -122,6 +122,8 @@ To see a future grade, click on the buttons and add an additional "future" grade
 <p>
 <h2>Simplifying Radicals</h2>
 <input id="radical" placeholder="Radical to be simplified">
+<button onClick="solving_radicals()">Go</button>
+<div id="output"></div>
 <script>
 function get_radicals() {
   var num = parseInt(document.getElementById("radical").value)
@@ -152,8 +154,8 @@ function solving_radicals() {
             break;
           }
         }
-        document.getElementById('output').innerHTML = output;
+        document.getElementById("output").innerHTML = output;
 }
 </script>
-<button onClick="solving_radicals()">Go</button>
+</p>
 </html>
