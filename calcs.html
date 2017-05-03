@@ -73,11 +73,16 @@ button {
     </div>  
 <body> 
 <p>
+  <input style=width:300px id="formal" placeholder="Formal grades, separated by commas. Ex. 100,90">
+  <br>
+  <input style=width:300px id="informal" placeholder="Informal grades, separated by commas. Ex.90,83">
+  <button onClick="print_grade()">Go</button>
+  <div id="grade"></div>
 <script type="text/javascript">
 var formal_grade = 0
 var informal_grade = 0
 function formals() {
-  var pr = prompt("Enter formal grades, separated by commas.")
+  var pr = document.getElementById("formal").value
   var formal_vals = pr.split(",") // Prompt Response
   for (var i = 0; i < formal_vals.length; i++) {
     formal_vals[i] = parseInt(formal_vals[i])
@@ -89,7 +94,7 @@ function formals() {
 }
 
 function informals() {
-  var pr = prompt("Enter informal grades, separated by commas.")
+  var pr = document.getElementById("informal").value
   var formal_vals = pr.split(",") // Prompt Response
   for (var i = 0; i < formal_vals.length; i++) {
     formal_vals[i] = parseInt(formal_vals[i])
@@ -101,10 +106,11 @@ function informals() {
 }
 
 function print_grade() {
-  window.document.write("Your grade is: " + (formal_grade + informal_grade))
-  window.document.write(". Press the back button to go back to the website.")
+  formals()
+  informals()
+  grade = "Your grade is: " + (formal_grade + informal_grade).toString();
+  document.getElementById("grade").innerHTML = grade;
 }
-
 </script>
 <h2>Grade Calculator</h2>
 To see your current grade, click on the buttons to insert your grade and calculate it.
