@@ -159,5 +159,22 @@ function solving_radicals() {
         document.getElementById("output").innerHTML = output;
 }
 </script>
+<h2>Fraction Simplifier</h2>
+<input style=width:80px id="numerator" placeholder="Numerator"><br>
+---------------- &nbsp; <button onClick="reduce()">Simplify</button><br>
+<input style=width:80px id="denominator" placeholder="Denominator"><br>
+<div id="simplified_fraction">
+<script>
+function reduce(numerator,denominator){
+  var numerator = parseInt(document.getElementById("numerator").value);
+  var denominator = parseInt(document.getElementById("denominator").value);
+  var gcd = function gcd(a,b){
+    return b ? gcd(b, a%b) : a;
+  };
+  gcd = gcd(numerator,denominator);
+  var simplified_list =  [numerator/gcd, denominator/gcd];
+  document.getElementById("simplified_fraction").innerHTML = simplified_list[0] + "/" + simplified_list[1];
+}
+</script>
 </p>
 </html>
