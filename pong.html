@@ -69,6 +69,7 @@ div.menu a:hover {
     </div>
 <p>
 <script>
+<script>
 var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
         window.setTimeout(callback, 1000 / 60)
     };
@@ -85,7 +86,7 @@ var ball = new Ball(200, 300);
 var keysDown = {};
 
 var render = function () {
-    context.fillStyle = "#FF00FF";
+    context.fillStyle = "#000000";
     context.fillRect(0, 0, width, height);
     player.render();
     computer.render();
@@ -114,7 +115,7 @@ function Paddle(x, y, width, height) {
 }
 
 Paddle.prototype.render = function () {
-    context.fillStyle = "#0000FF";
+    context.fillStyle = "#FFFFFF";
     context.fillRect(this.x, this.y, this.width, this.height);
 };
 
@@ -187,7 +188,7 @@ function Ball(x, y) {
 Ball.prototype.render = function () {
     context.beginPath();
     context.arc(this.x, this.y, 5, 2 * Math.PI, false);
-    context.fillStyle = "#000000";
+    context.fillStyle = "#FFFFFF";
     context.fill();
 };
 
@@ -240,6 +241,6 @@ window.addEventListener("keyup", function (event) {
     delete keysDown[event.keyCode];
 });
 </script>
+  Thanks to <a href="https://robots.thoughtbot.com/pong-clone-in-javascript">https://robots.thoughtbot.com/pong-clone-in-javascript</a> for stepping people through on making a Pong game!
 </p>
-</head>
 </html>
