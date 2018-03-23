@@ -85,7 +85,7 @@ function formals() {
 }
   var sum = formal_vals.reduce((a, b) => a + b, 0)
   var mean = sum / formal_vals.length
-    formal_grade = mean * .65
+    formal_grade = mean * parseInt(document.getElementById("fweight").value)
 
 }
 
@@ -97,7 +97,7 @@ function informals() {
 }
   var sum = formal_vals.reduce((a, b) => a + b, 0)
   var mean = sum / formal_vals.length
-    informal_grade = mean * .35
+    informal_grade = mean * parseInt(document.getElementById("iweight").value)
 
 }
 
@@ -115,7 +115,11 @@ To see a future grade, add an additional "future" grade and calculate it.
 <br></br>
 <input style=width:300px id="formal" placeholder="Formal grades, separated by commas. Ex. 100,90">
 <br>
+<input style=width:300px id="fweight" placeholder="Formal grade weight. Be sure to put the decimal. Ex. .70">
+<br></br>
 <input style=width:300px id="informal" placeholder="Informal grades, separated by commas. Ex.90,83">
+<br>
+<input style=width:300px id="iweight" placeholder="Informal grade weight. Be sure to put the decimal. Ex. .30">
 <button onClick="print_grade()">Go</button>
 <div id="grade"></div>
 </p>
